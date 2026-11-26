@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tự động từ – Tha động từ N5–N3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1f2433;--mute:#6b7285;--line:#e3e6ee;--ji:#0f7b6c;--jiBg:#e6f5f2;--ta:#c2410c;--taBg:#fdeee5;--acc:#3b5bdb;--ok:#2f9e44;--ng:#e03131}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Be Vietnam Pro","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.jp{font-family:"Noto Sans JP",sans-serif}
+header{background:linear-gradient(135deg,#3b5bdb,#0f7b6c);color:#fff;padding:22px 20px 0}
+header h1{margin:0 0 4px;font-size:22px}
+header p{margin:0 0 14px;opacity:.9;font-size:14px}
+nav{display:flex;gap:4px;flex-wrap:wrap;max-width:1000px}
+nav button{border:0;background:rgba(255,255,255,.15);color:#fff;padding:10px 16px;border-radius:10px 10px 0 0;font:inherit;font-weight:600;cursor:pointer}
+nav button.on{background:var(--bg);color:var(--ink)}
+main{max-width:1000px;margin:0 auto;padding:20px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+h2{font-size:18px;margin:0 0 12px}
+h3{font-size:16px;margin:0 0 6px}
+.tip{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+.tip:first-of-type{border-top:0}
+.num{width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.ji{color:var(--ji)}.ta{color:var(--ta)}
+.tag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:600}
+.tag.ji{background:var(--jiBg)}.tag.ta{background:var(--taBg)}
+.warn{background:#fff8e1;border:1px solid #f5d76e;border-radius:12px;padding:12px 14px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+select,input[type=text]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.btn{font:inherit;font-weight:600;border:1px solid var(--line);background:#fff;padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn:hover{filter:brightness(.96)}
+label.chk{display:flex;gap:6px;align-items:center;font-size:14px;cursor:pointer}
+.group{margin-bottom:18px}
+.ghead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.ghead small{color:var(--mute)}
+.rule{font-family:"Noto Sans JP";font-weight:700;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font-size:13px;color:var(--mute);font-weight:600;background:#fafbfd}
+td.w{font-family:"Noto Sans JP";font-size:18px;white-space:nowrap}
+td.w rt{font-size:11px;color:var(--mute)}
+.hide-ji td.wj .v,.hide-ta td.wt .v,.hide-mean td.m .v{visibility:hidden}
+.hide-ji td.wj,.hide-ta td.wt,.hide-mean td.m{cursor:pointer;background:repeating-linear-gradient(45deg,#fafbfd,#fafbfd 6px,#f1f3f8 6px,#f1f3f8 12px)}
+td.reveal .v{visibility:visible!important}
+.star{color:#f59f00;font-size:13px}
+.lv{font-size:12px;color:var(--mute);white-space:nowrap}
+/* flashcard */
+.fc-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.fc{width:min(460px,100%);height:260px;perspective:1000px;cursor:pointer}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc-f,.fc-b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;border:1px solid var(--line);background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.fc-b{transform:rotateY(180deg);background:#fbfcff}
+.fc-big{font-family:"Noto Sans JP";font-size:40px;font-weight:700}
+.fc-kana{font-family:"Noto Sans JP";color:var(--mute);font-size:18px}
+.fc-ask{margin-top:12px;font-size:14px;color:var(--mute)}
+.fc-pair{display:flex;gap:26px;align-items:center;font-family:"Noto Sans JP"}
+.fc-pair div{display:flex;flex-direction:column;align-items:center}
+.fc-pair b{font-size:30px}
+.fc-meta{margin-top:12px;font-size:14px}
+.progress{font-size:14px;color:var(--mute)}
+/* quiz */
+.q{font-family:"Noto Sans JP";font-size:20px;margin:6px 0 14px}
+.q .blank{display:inline-block;min-width:90px;border-bottom:2px solid var(--acc);text-align:center;color:var(--acc)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.opt{font-family:"Noto Sans JP";font-size:18px;padding:12px;border:2px solid var(--line);background:#fff;border-radius:12px;cursor:pointer}
+.opt:hover{border-color:var(--acc)}
+.opt.ok{border-color:var(--ok);background:#ebfbee}
+.opt.ng{border-color:var(--ng);background:#fff0f0}
+.opt[disabled]{cursor:default}
+.fb{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:15px;display:none}
+.fb.show{display:block}
+.fb.ok{background:#ebfbee;border:1px solid #b2f2bb}
+.fb.ng{background:#fff0f0;border:1px solid #ffc9c9}
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.score{font-weight:700}
+.bar{height:6px;background:var(--line);border-radius:999px;overflow:hidden;margin:10px 0 4px}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .3s}
+.result{text-align:center;padding:20px}
+.result .big{font-size:42px;font-weight:700;color:var(--acc)}
+.sub-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.sub-tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.kanji-hint{font-size:13px;color:var(--mute);font-family:"Noto Sans JP"}
+@media (max-width:600px){td.w{font-size:16px}.fc-big{font-size:32px}th.hm,td.lvc{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Tự động từ <span class="jp">（自動詞）</span> ↔ Tha động từ <span class="jp">（他動詞）</span></h1>
+  <p>Phạm vi N5 – N4 – N3 · Tham khảo Mimikara Oboeru N3 · Học theo quy tắc đổi đuôi</p>
+  <nav id="nav">
+    <button data-t="tips" class="on">① Mẹo nhớ</button>
+    <button data-t="list">② Bảng từ</button>
+    <button data-t="flash">③ Flashcard</button>
+    <button data-t="quiz">④ Luyện tập</button>
+  </nav>
+</header>
+
+<main>
+<!-- TIPS -->
+<section id="tips" class="on">
+  <div class="card">
+    <h2>6 mẹo nhận biết nhanh</h2>
+    <div class="tip"><div class="num">1</div><div><h3>Đuôi <span class="jp ta">〜す</span> → luôn là <span class="tag ta">他 tha</span></h3>“す = có người <b>sờ tay vào</b>.” <span class="jp">消す・壊す・動かす・落とす</span></div></div>
+    <div class="tip"><div class="num">2</div><div><h3>Đuôi <span class="jp ji">〜aる</span> (〜かる・〜がる・〜まる・〜わる・〜たる) → luôn là <span class="tag ji">自 tự</span></h3>“<b>À</b>, tự nó thế.” <span class="jp">決まる・上がる・見つかる・変わる</span></div></div>
+    <div class="tip"><div class="num">3</div><div><h3>Cặp có <span class="jp ji">〜れる</span>: dạng 〜れる thường là <span class="tag ji">自 tự</span></h3>Mang nghĩa “tự bị…”. <span class="jp">切れる・壊れる・売れる・割れる</span></div></div>
+    <div class="tip"><div class="num">4</div><div><h3>Trợ từ đi kèm</h3><span class="tag ji">自</span> <span class="jp">N <b>が</b> + V</span>: sự việc tự xảy ra &nbsp;|&nbsp; <span class="tag ta">他</span> <span class="jp">N <b>を</b> + V</span>: có người tác động<br><span class="jp">ドア<b>が</b>開く ／ ドア<b>を</b>開ける</span></div></div>
+    <div class="tip"><div class="num">5</div><div><h3>Mẫu câu đi kèm</h3><span class="tag ji">自</span> <span class="jp">〜<b>ている</b></span>: trạng thái kết quả &nbsp;|&nbsp; <span class="tag ta">他</span> <span class="jp">〜<b>てある</b></span>: có người đã làm sẵn, có chủ ý<br><span class="jp">窓が開いている ／ 窓が開けてある</span></div></div>
+    <div class="tip"><div class="num">6</div><div><h3>Câu tự kiểm tra</h3>Thêm được “<b>ai đó làm cho…</b>” → <span class="tag ta">他</span>. Ví dụ: <span class="jp">電気を消す</span> (ai đó tắt đèn).</div></div>
+  </div>
+  <div class="card warn">
+    <h3>⚠ Ngoại lệ cần nhớ</h3>
+    <span class="jp">曲がる</span> (rẽ) và <span class="jp">渡る</span> (băng qua) là <b>tự động từ</b> nhưng vẫn đi với <b class="jp">を</b> khi chỉ <b>nơi đi qua</b>:
+    <div class="jp" style="margin-top:6px;font-size:17px">角<b>を</b>曲がる　／　道<b>を</b>渡る</div>
+    Ở đây <span class="jp">を</span> chỉ địa điểm đi qua, <b>không phải</b> đối tượng bị tác động (giống <span class="jp">公園を散歩する・橋を渡る</span>).
+  </div>
+</section>
+
+<!-- LIST -->
+<section id="list">
+  <div class="card">
+    <div class="controls">
+      <select id="fGroup"></select>
+      <select id="fLv"><option value="">Tất cả cấp</option><option>N5</option><option>N4</option><option>N3</option></select>
+      <input type="text" id="fQ" placeholder="Tìm: kanji / kana / nghĩa">
+      <label class="chk"><input type="checkbox" id="fStar"> Chỉ ★ Mimikara</label>
+    </div>
+    <div class="controls">
+      <b style="font-size:14px">Tự kiểm tra – che cột:</b>
+      <label class="chk"><input type="checkbox" data-h="hide-ji"> 自動詞</label>
+      <label class="chk"><input type="checkbox" data-h="hide-ta"> 他動詞</label>
+      <label class="chk"><input type="checkbox" data-h="hide-mean"> Nghĩa</label>
+      <span class="kanji-hint">(bấm vào ô bị che để xem)</span>
+    </div>
+    <div id="tbl"></div>
+    <p class="kanji-hint">★ = có trong Mimikara Oboeru N3 (Buổi 14, từ 411–445). Nhãn cấp N5/N4/N3 chỉ mang tính tham khảo.</p>
+  </div>
+</section>
+
+<!-- FLASH -->
+<section id="flash">
+  <div class="card">
+    <div class="controls">
+      <select id="cGroup"></select>
+      <select id="cLv"><option value="">Tất cả cấp</option><option>N5</option><option>N4</option><option>N3</option></select>
+      <select id="cMode"><option value="ji">Thấy 自 → nhớ 他</option><option value="ta">Thấy 他 → nhớ 自</option><option value="mix">Trộn ngẫu nhiên</option></select>
+      <button class="btn" id="cShuffle">🔀 Xáo lại</button>
+    </div>
+    <div class="fc-wrap">
+      <div class="progress" id="cProg"></div>
+      <div class="fc" id="fc"><div class="fc-in">
+        <div class="fc-f" id="fcF"></div>
+        <div class="fc-b" id="fcB"></div>
+      </div></div>
+      <div class="controls" style="justify-content:center">
+        <button class="btn" id="cPrev">← Trước</button>
+        <button class="btn pri" id="cFlip">Lật thẻ</button>
+        <button class="btn" id="cNext">Sau →</button>
+      </div>
+      <div class="kanji-hint">Bấm vào thẻ hoặc phím Space để lật · ← → để chuyển</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="card">
+    <div class="sub-tabs" id="qTabs">
+      <button class="btn on" data-q="cls">Bài 1 · Phân loại 自 / 他</button>
+      <button class="btn" data-q="pair">Bài 2 · Tìm cặp</button>
+      <button class="btn" data-q="sent">Bài 3 · Chọn từ đúng trong câu</button>
+    </div>
+    <div class="controls">
+      <select id="qLv"><option value="">Tất cả cấp</option><option>N5</option><option>N4</option><option>N3</option></select>
+      <select id="qN"><option value="10">10 câu</option><option value="20">20 câu</option><option value="0">Tất cả</option></select>
+      <button class="btn pri" id="qStart">▶ Làm bài mới</button>
+    </div>
+    <div id="qDesc" class="kanji-hint"></div>
+    <div id="qBox"></div>
+  </div>
+</section>
+</main>
+
+<script>
+// [nhóm, 自 kanji, 自 kana, 他 kanji, 他 kana, nghĩa, cấp, ★]
+const G={
+1:{r:"〜aる（自） ↔ 〜eる（他）",d:"Nhóm dễ nhất"},
+2:{r:"〜u（自） ↔ 〜eる（他）",d:""},
+3:{r:"〜eる（自） ↔ 〜u（他）",d:"Ngược nhóm 2 – dễ nhầm! 〜れる/〜ける = “tự bị…”"},
+4:{r:"〜eる（自） ↔ 〜asu／〜yasu（他）",d:""},
+5:{r:"〜u／〜aる（自） ↔ 〜asu（他）",d:""},
+6:{r:"〜れる／〜える（自） ↔ 〜す（他）",d:""},
+7:{r:"〜る（自） ↔ 〜す（他）",d:""},
+8:{r:"〜iる（自） ↔ 〜osu／〜asu（他）",d:""},
+9:{r:"Đặc biệt – học thuộc",d:"Không theo quy tắc"}};
+const D=[
+[1,"始まる","はじまる","始める","はじめる","bắt đầu","N5"],
+[1,"閉まる","しまる","閉める","しめる","đóng","N5"],
+[1,"止まる","とまる","止める","とめる","dừng","N5"],
+[1,"終わる","おわる","終える","おえる","kết thúc","N5 / N3"],
+[1,"上がる","あがる","上げる","あげる","lên / nâng lên","N4"],
+[1,"下がる","さがる","下げる","さげる","xuống / hạ xuống","N4"],
+[1,"集まる","あつまる","集める","あつめる","tập trung / thu gom","N4"],
+[1,"決まる","きまる","決める","きめる","được quyết / quyết định","N4"],
+[1,"見つかる","みつかる","見つける","みつける","được tìm thấy / tìm ra","N4"],
+[1,"かかる","かかる","かける","かける","treo, tốn / treo, gọi","N4"],
+[1,"助かる","たすかる","助ける","たすける","được cứu / cứu giúp","N4",1],
+[1,"変わる","かわる","変える","かえる","thay đổi","N4",1],
+[1,"伝わる","つたわる","伝える","つたえる","được truyền / truyền đạt","N3 / N4"],
+[1,"当たる","あたる","当てる","あてる","trúng / đoán, làm trúng","N3",1],
+[1,"温まる","あたたまる","温める","あたためる","ấm lên / làm ấm","N3"],
+[1,"広がる","ひろがる","広げる","ひろげる","lan rộng / mở rộng","N3"],
+[1,"曲がる","まがる","曲げる","まげる","cong, rẽ / bẻ cong","N5 / N3"],
+[1,"混ざる","まざる","混ぜる","まぜる","lẫn vào / trộn","N3"],
+[1,"重なる","かさなる","重ねる","かさねる","chồng lên / xếp chồng","N3"],
+[1,"固まる","かたまる","固める","かためる","đông cứng / làm cứng","N3"],
+[1,"埋まる","うまる","埋める","うめる","bị lấp / lấp, chôn","N3"],
+[1,"詰まる","つまる","詰める","つめる","bị tắc / nhồi, xếp chặt","N3"],
+[1,"高まる","たかまる","高める","たかめる","tăng cao / nâng cao","N3"],
+[2,"開く","あく","開ける","あける","mở","N5"],
+[2,"入る","はいる","入れる","いれる","vào / cho vào","N5"],
+[2,"付く","つく","付ける","つける","bật, dính / bật, gắn","N5 / N4"],
+[2,"立つ","たつ","立てる","たてる","đứng / dựng","N5 / N4"],
+[2,"並ぶ","ならぶ","並べる","ならべる","xếp hàng / bày ra","N4"],
+[2,"建つ","たつ","建てる","たてる","được xây / xây","N4"],
+[2,"届く","とどく","届ける","とどける","tới nơi / gửi tới","N4",1],
+[2,"続く","つづく","続ける","つづける","tiếp diễn / tiếp tục","N4"],
+[2,"片付く","かたづく","片付ける","かたづける","gọn gàng / dọn dẹp","N4"],
+[2,"育つ","そだつ","育てる","そだてる","lớn lên / nuôi dạy","N4"],
+[2,"進む","すすむ","進める","すすめる","tiến triển / xúc tiến","N4 / N3"],
+[2,"近づく","ちかづく","近づける","ちかづける","đến gần / đưa lại gần","N3",1],
+[2,"向く","むく","向ける","むける","hướng về / hướng (cái gì) về","N3"],
+[2,"沈む","しずむ","沈める","しずめる","chìm / nhấn chìm","N3"],
+[2,"縮む","ちぢむ","縮める","ちぢめる","co lại / rút ngắn","N3"],
+[2,"傷つく","きずつく","傷つける","きずつける","bị tổn thương / làm tổn thương","N3"],
+[3,"切れる","きれる","切る","きる","đứt, sắc / cắt","N4"],
+[3,"売れる","うれる","売る","うる","bán chạy / bán","N4"],
+[3,"割れる","われる","割る","わる","vỡ / làm vỡ","N4"],
+[3,"折れる","おれる","折る","おる","gãy / bẻ gãy","N4"],
+[3,"破れる","やぶれる","破る","やぶる","rách / xé","N4"],
+[3,"焼ける","やける","焼く","やく","chín, cháy / nướng","N4"],
+[3,"取れる","とれる","取る","とる","bong ra / lấy","N3"],
+[3,"抜ける","ぬける","抜く","ぬく","rụng, sót / nhổ, rút","N3"],
+[4,"冷える","ひえる","冷やす","ひやす","lạnh đi / làm lạnh","N4 / N3"],
+[4,"増える","ふえる","増やす","ふやす","tăng / làm tăng","N4 / N3",1],
+[4,"燃える","もえる","燃やす","もやす","cháy / đốt","N4 / N3"],
+[4,"逃げる","にげる","逃がす","にがす","chạy trốn / thả, để sổng","N4 / N3"],
+[4,"慣れる","なれる","慣らす","ならす","quen / làm cho quen","N4 / N3"],
+[4,"溶ける","とける","溶かす","とかす","tan / làm tan","N3"],
+[4,"濡れる","ぬれる","濡らす","ぬらす","ướt / làm ướt","N3"],
+[4,"揺れる","ゆれる","揺らす","ゆらす","rung lắc / lắc","N3"],
+[4,"焦げる","こげる","焦がす","こがす","cháy khét / làm khét","N3"],
+[4,"生える","はえる","生やす","はやす","mọc / để (râu) mọc","N3"],
+[5,"飛ぶ","とぶ","飛ばす","とばす","bay / làm bay","N5 / N3"],
+[5,"動く","うごく","動かす","うごかす","chuyển động / di chuyển (vật)","N4 / N3"],
+[5,"乾く","かわく","乾かす","かわかす","khô / sấy khô","N4 / N3"],
+[5,"沸く","わく","沸かす","わかす","sôi / đun sôi","N4"],
+[5,"鳴る","なる","鳴らす","ならす","kêu / làm kêu","N4 / N3"],
+[5,"減る","へる","減らす","へらす","giảm / cắt giảm","N4 / N3",1],
+[5,"済む","すむ","済ます","すます","xong / làm cho xong","N3"],
+[5,"散らかる","ちらかる","散らかす","ちらかす","bừa bộn / bày bừa","N3"],
+[6,"消える","きえる","消す","けす","tắt, biến mất / tắt, xóa","N5"],
+[6,"壊れる","こわれる","壊す","こわす","hỏng / làm hỏng","N4"],
+[6,"倒れる","たおれる","倒す","たおす","đổ / làm đổ","N4"],
+[6,"汚れる","よごれる","汚す","よごす","bẩn / làm bẩn","N4"],
+[6,"流れる","ながれる","流す","ながす","chảy / xả, cho chảy","N4 / N3"],
+[6,"隠れる","かくれる","隠す","かくす","trốn / giấu","N3"],
+[6,"外れる","はずれる","外す","はずす","tuột, trượt / tháo ra","N3"],
+[6,"離れる","はなれる","離す","はなす","rời xa / tách ra","N3"],
+[6,"崩れる","くずれる","崩す","くずす","sụp đổ / phá vỡ","N3"],
+[6,"潰れる","つぶれる","潰す","つぶす","bẹp, phá sản / đè bẹp","N3"],
+[6,"こぼれる","こぼれる","こぼす","こぼす","tràn, đổ ra / làm đổ","N3"],
+[6,"現れる","あらわれる","現す","あらわす","xuất hiện / để lộ ra","N3"],
+[7,"帰る","かえる","帰す","かえす","về / cho về","N5 / N3"],
+[7,"返る","かえる","返す","かえす","trở lại / trả lại","N3 / N5",1],
+[7,"直る","なおる","直す","なおす","được sửa / sửa","N4"],
+[7,"治る","なおる","治す","なおす","khỏi bệnh / chữa","N4"],
+[7,"戻る","もどる","戻す","もどす","quay lại / để lại chỗ cũ","N4 / N3"],
+[7,"残る","のこる","残す","のこす","còn lại / để lại","N4"],
+[7,"回る","まわる","回す","まわす","quay / xoay","N4"],
+[7,"渡る","わたる","渡す","わたす","băng qua / trao","N4"],
+[7,"通る","とおる","通す","とおす","đi qua / cho qua","N4 / N3"],
+[7,"起こる","おこる","起こす","おこす","xảy ra / gây ra","N4"],
+[7,"写る","うつる","写す","うつす","được chụp / chụp, chép","N4"],
+[7,"移る","うつる","移す","うつす","chuyển sang / chuyển (vật)","N3"],
+[8,"起きる","おきる","起こす","おこす","thức dậy / đánh thức","N5 / N4"],
+[8,"降りる","おりる","降ろす","おろす","xuống (xe) / cho xuống, hạ","N5 / N3"],
+[8,"落ちる","おちる","落とす","おとす","rơi / làm rơi","N4"],
+[8,"伸びる","のびる","伸ばす","のばす","dài ra / kéo dài, duỗi","N3"],
+[8,"延びる","のびる","延ばす","のばす","bị hoãn, kéo dài / gia hạn","N3"],
+[8,"生きる","いきる","生かす","いかす","sống / tận dụng","N3"],
+[9,"出る","でる","出す","だす","ra / đưa ra, nộp","N5"],
+[9,"乗る","のる","乗せる","のせる","lên xe / chở","N5 / N4"],
+[9,"見える","みえる","見る","みる","nhìn thấy được / nhìn","N4"],
+[9,"聞こえる","きこえる","聞く","きく","nghe thấy được / nghe","N4"],
+[9,"寝る","ねる","寝かせる","ねかせる","ngủ / cho ngủ","N4"],
+[9,"なくなる","なくなる","なくす","なくす","mất / làm mất","N4"],
+[9,"生まれる","うまれる","生む","うむ","được sinh ra / sinh ra","N4 / N3"],
+[9,"合う","あう","合わせる","あわせる","hợp / làm cho khớp","N4 / N3",1],
+[9,"似る","にる","似せる","にせる","giống / làm cho giống","N3",1],
+[9,"分かれる","わかれる","分ける","わける","được chia / chia","N3",1],
+[9,"つながる","つながる","つなぐ・つなげる","つなぐ・つなげる","được nối / nối","N3"]
+];
+// Câu luyện tập: [câu với ＿, đáp án đúng, đáp án sai, giải thích, cấp]
+const S=[
+["電気が＿＿います。","ついて","つけて","Có が, mô tả trạng thái đèn đang sáng → 自 付く＋ている.","N5"],
+["部屋が暗いので、電気を＿＿ください。","つけて","ついて","Có を, người nói nhờ ai đó bật → 他 付ける.","N5"],
+["会議は9時に＿＿。","始まります","始めます","Cuộc họp tự bắt đầu, không nói ai làm → 自 始まる.","N5"],
+["では、授業を＿＿。","始めます","始まります","Có を, giáo viên chủ động bắt đầu → 他 始める.","N5"],
+["窓が＿＿いますよ。寒いので閉めましょう。","開いて","開けて","Có が + ている: trạng thái cửa đang mở → 自 開く.","N5"],
+["毎朝、母が6時にわたしを＿＿。","起こします","起きます","Mẹ đánh thức “tôi” (を) → 他 起こす.","N5"],
+["2つ目の角を＿＿、まっすぐ行ってください。","曲がって","曲げて","Ngoại lệ: を chỉ nơi đi qua, 曲がる vẫn là 自 (rẽ).","N5"],
+["道を＿＿ときは、車に気をつけてください。","渡る","渡す","Ngoại lệ: を chỉ nơi băng qua → 自 渡る.","N4"],
+["この書類を部長に＿＿ください。","渡して","渡って","Trao tài liệu (を) cho trưởng phòng → 他 渡す.","N4"],
+["子どもがコップを落として、コップが＿＿。","割れた","割った","Cái cốc (が) tự vỡ → 自 割れる (nhóm 3, 〜れる là 自).","N4"],
+["弟がわたしのパソコンを＿＿。","壊した","壊れた","Em trai làm hỏng máy tính (を) → 他 壊す (đuôi す = tha).","N4"],
+["地震で本棚が＿＿。","倒れた","倒した","Kệ sách (が) tự đổ do động đất → 自 倒れる.","N4"],
+["電車の中で財布を＿＿しまいました。","落として","落ちて","Làm rơi ví (を) → 他 落とす.","N4"],
+["冷蔵庫でビールを＿＿おきます。","冷やして","冷えて","Có を + ておく (chuẩn bị có chủ ý) → 他 冷やす.","N4"],
+["この新しい商品はよく＿＿いる。","売れて","売って","Sản phẩm bán chạy – tính chất của vật → 自 売れる.","N4"],
+["お湯が＿＿ら、お茶を入れてください。","沸いた","沸かした","Nước (が) sôi → 自 沸く.","N4"],
+["洗濯物がまだ＿＿いない。","乾いて","乾かして","Quần áo (が) chưa khô → 自 乾く.","N4"],
+["机の上に資料が＿＿あります。","並べて","並んで","〜てある: ai đó đã bày sẵn → luôn dùng 他 並べる.","N4"],
+["駅の前に人がたくさん＿＿いる。","集まって","集めて","Người (が) tụ tập → 自 集まる (đuôi aる).","N4"],
+["旅行の日程がやっと＿＿。","決まった","決めた","Lịch trình (が) đã được quyết → 自 決まる.","N4"],
+["壁に絵が＿＿あります。","かけて","かかって","〜てある → 他 かける (ai đó đã treo sẵn).","N4"],
+["ドアにかぎが＿＿います。","かかって","かけて","Có が + ている: cửa đang khóa → 自 かかる.","N4"],
+["使ったものは元の場所に＿＿ください。","戻して","戻って","Để đồ (を) về chỗ cũ → 他 戻す.","N4"],
+["故障したエアコンがやっと＿＿。","直った","直した","Máy lạnh (が) đã được sửa xong → 自 直る.","N4"],
+["事故が＿＿のは、夜10時ごろだった。","起こった","起こした","Tai nạn (が) xảy ra → 自 起こる.","N4"],
+["最近、外国人の観光客が＿＿。","増えた","増やした","Khách (が) tăng lên → 自 増える.","N3"],
+["会社は来年、社員を＿＿予定だ。","増やす","増える","Công ty tăng nhân viên (を) → 他 増やす.","N3"],
+["雨で服が＿＿しまった。","濡れて","濡らして","Quần áo (が) bị ướt do mưa → 自 濡れる.","N3"],
+["風で木が＿＿いる。","揺れて","揺らして","Cây (が) đang rung → 自 揺れる.","N3"],
+["ここでゴミを＿＿ないでください。","燃やさ","燃え","Đốt rác (を) → 他 燃やす.","N3"],
+["机の上が＿＿いて、仕事ができない。","散らかって","散らかして","Bàn (が) đang bừa bộn → 自 散らかる (đuôi aる).","N3"],
+["荷物は明日＿＿予定です。","届く","届ける","Hàng (は/が) tới nơi → 自 届く.","N3"],
+["電車が駅に＿＿いる。ドアが開いた。","止まって","止めて","Tàu (が) đang dừng → 自 止まる.","N5"],
+["ボールが頭に＿＿。","当たった","当てた","Bóng (が) trúng đầu → 自 当たる.","N3"]
+];
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const rb=(k,r)=>k===r?`<span class="jp">${k}</span>`:`<ruby class="jp">${k}<rt>${r}</rt></ruby>`;
+const lvOk=(lv,f)=>!f||lv.includes(f);
+
+// nav
+$$("#nav button").forEach(b=>b.onclick=()=>{$$("#nav button").forEach(x=>x.classList.remove("on"));b.classList.add("on");$$("section").forEach(s=>s.classList.remove("on"));$("#"+b.dataset.t).classList.add("on");});
+
+// group selects
+const gOpts='<option value="">Tất cả nhóm</option>'+Object.keys(G).map(k=>`<option value="${k}">Nhóm ${k}: ${G[k].r}</option>`).join("");
+$("#fGroup").innerHTML=gOpts;$("#cGroup").innerHTML=gOpts;
+
+// LIST
+function renderList(){
+  const g=$("#fGroup").value,lv=$("#fLv").value,q=$("#fQ").value.trim().toLowerCase(),st=$("#fStar").checked;
+  let h="";
+  Object.keys(G).forEach(k=>{
+    if(g&&g!==k)return;
+    const rows=D.filter(d=>String(d[0])===k&&lvOk(d[6],lv)&&(!st||d[7])&&(!q||(d.slice(1,6).join(" ").toLowerCase().includes(q))));
+    if(!rows.length)return;
+    h+=`<div class="group"><div class="ghead"><span class="rule">Nhóm ${k}　${G[k].r}</span><small>${G[k].d} · ${rows.length} cặp</small></div>
+    <table><thead><tr><th><span class="ji">自動詞</span></th><th><span class="ta">他動詞</span></th><th class="hm">Nghĩa</th><th>Cấp</th></tr></thead><tbody>`+
+    rows.map(d=>`<tr><td class="w wj"><span class="v">${rb(d[1],d[2])}</span></td><td class="w wt"><span class="v">${rb(d[3],d[4])}</span></td><td class="m"><span class="v">${d[5]}</span></td><td class="lvc"><span class="lv">${d[6]}</span> ${d[7]?'<span class="star">★</span>':''}</td></tr>`).join("")+
+    `</tbody></table></div>`;
+  });
+  $("#tbl").innerHTML=h||"<p>Không có kết quả.</p>";
+}
+["#fGroup","#fLv","#fStar"].forEach(s=>$(s).onchange=renderList);$("#fQ").oninput=renderList;
+$$("[data-h]").forEach(c=>c.onchange=()=>$("#tbl").classList.toggle(c.dataset.h,c.checked));
+$("#tbl").addEventListener("click",e=>{const td=e.target.closest("td.wj,td.wt,td.m");if(td)td.classList.toggle("reveal")});
+renderList();
+
+// FLASH
+let deck=[],ci=0;
+function buildDeck(){
+  const g=$("#cGroup").value,lv=$("#cLv").value,m=$("#cMode").value;
+  deck=shuf(D.filter(d=>(!g||String(d[0])===g)&&lvOk(d[6],lv))).map(d=>({d,side:m==="mix"?(Math.random()<.5?"ji":"ta"):m}));
+  ci=0;showCard();
+}
+function showCard(){
+  $("#fc").classList.remove("flip");
+  if(!deck.length){$("#fcF").innerHTML="Không có thẻ";$("#fcB").innerHTML="";$("#cProg").textContent="";return}
+  const {d,side}=deck[ci],isJi=side==="ji";
+  const k=isJi?d[1]:d[3],r=isJi?d[2]:d[4];
+  setTimeout(()=>{
+  $("#fcF").innerHTML=`<span class="tag ${isJi?'ji':'ta'}">${isJi?'自動詞':'他動詞'}</span><div class="fc-big ${isJi?'ji':'ta'}">${k}</div>${k!==r?`<div class="fc-kana">${r}</div>`:''}<div class="fc-ask">→ ${isJi?'他動詞':'自動詞'} tương ứng là gì?</div>`;
+  $("#fcB").innerHTML=`<div class="fc-pair"><div><span class="tag ji">自</span><b class="ji">${d[1]}</b><span class="fc-kana">${d[1]!==d[2]?d[2]:''}</span></div><div style="font-size:24px">↔</div><div><span class="tag ta">他</span><b class="ta">${d[3]}</b><span class="fc-kana">${d[3]!==d[4]?d[4]:''}</span></div></div><div class="fc-meta">${d[5]}</div><div class="kanji-hint" style="margin-top:6px">Nhóm ${d[0]}: ${G[d[0]].r} · ${d[6]} ${d[7]?'★':''}</div>`;},deck.length&&$("#fc").classList.contains("flip")?250:0);
+  $("#cProg").textContent=`Thẻ ${ci+1} / ${deck.length}`;
+}
+$("#fc").onclick=$("#cFlip").onclick=()=>$("#fc").classList.toggle("flip");
+$("#cNext").onclick=()=>{if(deck.length){ci=(ci+1)%deck.length;showCard()}};
+$("#cPrev").onclick=()=>{if(deck.length){ci=(ci-1+deck.length)%deck.length;showCard()}};
+["#cGroup","#cLv","#cMode"].forEach(s=>$(s).onchange=buildDeck);$("#cShuffle").onclick=buildDeck;
+document.addEventListener("keydown",e=>{if(!$("#flash").classList.contains("on"))return;if(e.key===" "){e.preventDefault();$("#fc").classList.toggle("flip")}if(e.key==="ArrowRight")$("#cNext").click();if(e.key==="ArrowLeft")$("#cPrev").click();});
+buildDeck();
+
+// QUIZ
+let qType="cls",qs=[],qi=0,score=0;
+const desc={cls:"Xem một động từ, chọn đó là 自動詞 hay 他動詞.",pair:"Cho một động từ, chọn từ đúng là cặp của nó.",sent:"Chọn từ đúng điền vào chỗ trống (chú ý が／を, ている／てある)."};
+$$("#qTabs button").forEach(b=>b.onclick=()=>{$$("#qTabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");qType=b.dataset.q;startQuiz()});
+$("#qStart").onclick=startQuiz;$("#qLv").onchange=startQuiz;$("#qN").onchange=startQuiz;
+function single(d){return !d[3].includes("・")}
+function startQuiz(){
+  const lv=$("#qLv").value,n=+$("#qN").value;
+  $("#qDesc").textContent=desc[qType];
+  let pool;
+  if(qType==="sent"){pool=shuf(S.filter(s=>lvOk(s[4],lv))).map(s=>({type:"sent",s}))}
+  else{
+    const ds=D.filter(d=>lvOk(d[6],lv)&&single(d));
+    if(qType==="cls")pool=shuf(ds).map(d=>{const ji=Math.random()<.5;return{type:"cls",d,ji}});
+    else pool=shuf(ds).map(d=>{const ji=Math.random()<.5;return{type:"pair",d,ji}});
+  }
+  qs=n?pool.slice(0,n):pool;qi=0;score=0;showQ();
+}
+function showQ(){
+  const box=$("#qBox");
+  if(qi>=qs.length){
+    const pct=qs.length?Math.round(score/qs.length*100):0;
+    box.innerHTML=`<div class="result"><div class="big">${score} / ${qs.length}</div><p>${pct>=80?"Rất tốt! 🎉":pct>=50?"Khá ổn – xem lại các câu sai nhé.":"Cần ôn thêm – xem lại tab Mẹo nhớ và Bảng từ."}</p><button class="btn pri" onclick="startQuiz()">Làm lại</button></div>`;return}
+  const q=qs[qi];let qHtml,opts,ans,exp;
+  if(q.type==="cls"){
+    const k=q.ji?q.d[1]:q.d[3],r=q.ji?q.d[2]:q.d[4];
+    qHtml=`<div class="q" style="font-size:34px;text-align:center">${rb(k,r)}</div>`;
+    opts=["自動詞","他動詞"];ans=q.ji?"自動詞":"他動詞";
+    exp=`Cặp: <b class="jp ji">${q.d[1]}</b> ↔ <b class="jp ta">${q.d[3]}</b> (${q.d[5]}) · Nhóm ${q.d[0]}: <span class="jp">${G[q.d[0]].r}</span>`;
+  }else if(q.type==="pair"){
+    const k=q.ji?q.d[1]:q.d[3],r=q.ji?q.d[2]:q.d[4];
+    ans=q.ji?q.d[3]:q.d[1];
+    qHtml=`<div class="q">${q.ji?'<span class="tag ji">自動詞</span>':'<span class="tag ta">他動詞</span>'} ${rb(k,r)} → ${q.ji?'他動詞':'自動詞'} tương ứng là?</div>`;
+    const ansKana=q.ji?q.d[4]:q.d[2];
+    const cand=D.filter(x=>x!==q.d&&single(x)&&(q.ji?x[4]:x[2])!==ansKana);
+    const same=shuf(cand.filter(x=>x[0]===q.d[0])),rest=shuf(cand.filter(x=>x[0]!==q.d[0]));
+    const others=[...new Set([...same,...rest].map(x=>q.ji?x[3]:x[1]))].filter(x=>x!==ans);
+    opts=shuf([ans,...others.slice(0,3)]);
+    exp=`<b class="jp ji">${q.d[1]}</b> ↔ <b class="jp ta">${q.d[3]}</b> (${q.d[5]}) · Quy tắc nhóm ${q.d[0]}: <span class="jp">${G[q.d[0]].r}</span>`;
+  }else{
+    const s=q.s;ans=s[1];opts=shuf([s[1],s[2]]);
+    qHtml=`<div class="q">${s[0].replace("＿＿",'<span class="blank">？</span>')}</div>`;
+    exp=s[3];
+  }
+  box.innerHTML=`<div class="qtop"><span>Câu ${qi+1} / ${qs.length}</span><span class="score">Điểm: ${score}</span></div><div class="bar"><i style="width:${qi/qs.length*100}%"></i></div>${qHtml}<div class="opts">${opts.map(o=>`<button class="opt">${o}</button>`).join("")}</div><div class="fb" id="fb"></div><div style="text-align:right;margin-top:12px"><button class="btn pri" id="nextQ" style="display:none">Câu tiếp →</button></div>`;
+  $$(".opt").forEach(b=>b.onclick=()=>{
+    const ok=b.textContent===ans;if(ok)score++;
+    $$(".opt").forEach(x=>{x.disabled=true;if(x.textContent===ans)x.classList.add("ok")});
+    if(!ok)b.classList.add("ng");
+    if(q.type==="sent"){const bl=$(".blank");bl.textContent=ans;}
+    const fb=$("#fb");fb.className="fb show "+(ok?"ok":"ng");fb.innerHTML=(ok?"✔ Đúng! ":"✘ Chưa đúng. Đáp án: <b class='jp'>"+ans+"</b>. ")+exp;
+    $("#nextQ").style.display="inline-block";$(".score").textContent="Điểm: "+score;
+  });
+  const nb=$("#nextQ");nb.onclick=()=>{qi++;showQ()};
+}
+startQuiz();
+</script>
+</body>
+</html>

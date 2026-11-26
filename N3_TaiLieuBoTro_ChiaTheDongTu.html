@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tài liệu bổ trợ N3 – Ôn tập cách chia thể động từ</title>
+<style>
+:root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f7f8fb;--card:#fff;--ok:#16a34a;--okbg:#dcfce7;--ng:#dc2626;--ngbg:#fee2e2;--warn:#b45309;--warnbg:#fff7ed}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+header.hero{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:36px 20px 28px;text-align:center}
+.hero h1{margin:0 0 6px;font-size:1.7rem}
+.hero p{margin:0;opacity:.9}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;padding:8px 12px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+nav a{display:inline-block;margin:2px 4px;padding:5px 12px;border-radius:999px;font-size:.88rem;text-decoration:none;color:#fff;font-weight:600}
+main{max-width:980px;margin:0 auto;padding:20px 14px 60px}
+section{background:var(--card);border-radius:14px;margin:22px 0;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden;scroll-margin-top:60px}
+section>.hd{padding:14px 20px;color:#fff;font-size:1.25rem;font-weight:700}
+section>.bd{padding:6px 20px 20px}
+h3{margin:22px 0 8px;font-size:1.08rem;padding-left:10px;border-left:4px solid var(--c)}
+h3.ex-title{background:var(--cl);border-left:none;padding:8px 12px;border-radius:8px;color:var(--c)}
+.p0{--c:#475569;--cl:#f1f5f9}.p1{--c:#2563eb;--cl:#eff6ff}.p2{--c:#059669;--cl:#ecfdf5}.p3{--c:#7c3aed;--cl:#f5f3ff}
+.p4{--c:#ea580c;--cl:#fff7ed}.p5{--c:#db2777;--cl:#fdf2f8}.p6{--c:#0891b2;--cl:#ecfeff}.p7{--c:#334155;--cl:#f8fafc}
+section>.hd{background:var(--c)} nav a.p0,nav a.p1,nav a.p2,nav a.p3,nav a.p4,nav a.p5,nav a.p6,nav a.p7{background:var(--c)}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--cl);color:var(--c);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even) td{background:#fafafa}
+.warn{background:var(--warnbg);border-left:4px solid #f59e0b;border-radius:8px;padding:10px 14px;margin:12px 0;color:#7c2d12}
+.warn b{color:#9a3412}
+.tip{background:var(--cl);border-radius:8px;padding:10px 14px;margin:12px 0}
+.hl{color:var(--c);font-weight:700}
+.jp{font-size:1.05em}
+ul,ol{padding-left:22px}
+/* exercises */
+.ex{background:var(--cl);border-radius:10px;padding:12px;margin:10px 0 18px}
+.ext td{background:#fff!important}
+.ext td.n{width:34px;color:var(--muted);text-align:center}
+.ext td.given{font-weight:700;white-space:nowrap}
+.ext input{width:100%;min-width:90px;padding:6px 8px;border:1.5px solid #cbd5e1;border-radius:6px;font-size:1rem;font-family:inherit}
+.ext input:focus,.fill input:focus{outline:none;border-color:var(--c);box-shadow:0 0 0 3px var(--cl)}
+.fill{margin:0;padding-left:24px}
+.fill li{margin:10px 0;background:#fff;padding:8px 10px;border-radius:8px}
+.fill input.w{width:150px;margin:0 4px;padding:5px 8px;border:1.5px solid #cbd5e1;border-radius:6px;font-size:1rem;font-family:inherit}
+#ex6a .fill input.w{width:260px}
+input.ok{border-color:var(--ok)!important;background:var(--okbg)}
+input.ng{border-color:var(--ng)!important;background:var(--ngbg)}
+.key{display:none;font-size:.85rem;color:var(--ok);font-weight:700;margin-left:4px}
+.ex.showkey .key{display:inline-block}
+.ext .key{display:none}.ex.showkey .ext .key{display:block}
+.tag{display:inline-block;font-size:.75rem;background:var(--c);color:#fff;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.btns{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.btns button,.opt{font-family:inherit;font-size:.92rem;border:none;border-radius:8px;padding:7px 14px;cursor:pointer;font-weight:600}
+.check{background:var(--c);color:#fff}.show{background:#fff;color:var(--c);border:1.5px solid var(--c)!important}.reset{background:#e5e7eb;color:#374151}
+.opts{display:inline-flex;gap:6px;margin:0 6px}
+.opt{background:#fff;border:1.5px solid #cbd5e1!important;padding:4px 12px}
+.opt.ok{background:var(--okbg);border-color:var(--ok)!important;color:var(--ok)}
+.opt.ng{background:var(--ngbg);border-color:var(--ng)!important;color:var(--ng)}
+.score{font-weight:700;color:var(--c);align-self:center}
+.steps li{margin:4px 0}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px}
+@media print{nav,.btns{display:none}section{box-shadow:none;break-inside:auto}body{background:#fff}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}section>.hd,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media (max-width:600px){body{font-size:15px}.hero h1{font-size:1.35rem}section>.bd{padding:4px 12px 16px}th,td{padding:6px 7px}.fill input.w,#ex6a .fill input.w{width:100%;margin:6px 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Ôn tập cách chia thể động từ</h1>
+  <p>Tài liệu bổ trợ lớp JLPT N3 · KyowaVN · NiX Education</p>
+</header>
+<nav>
+  <a class="p0" href="#s0">Hướng dẫn</a><a class="p1" href="#s1">1. Phân nhóm</a><a class="p2" href="#s2">2. Thể cơ bản</a><a class="p3" href="#s3">3. Khả năng・Ý chí</a><a class="p4" href="#s4">4. Điều kiện</a><a class="p5" href="#s5">5. Bị động・Sai khiến</a><a class="p6" href="#s6">6. ～んです・～ん</a><a class="p7" href="#s7">Bảng tổng hợp</a>
+</nav>
+<main>
+
+<section id="s0" class="p0"><div class="hd">Hướng dẫn sử dụng</div><div class="bd">
+<p>Tài liệu giúp anh/chị ôn lại cách chia các thể động từ (V) — nền tảng bắt buộc để hiểu đúng ngữ pháp N3.</p>
+<ol class="steps">
+<li>Đọc lý thuyết theo thứ tự Phần 1 → Phần 6 (phần sau dùng kiến thức phần trước).</li>
+<li>Làm bài tập ngay sau mỗi phần: <b>gõ đáp án vào ô trống</b>, rồi bấm <b>Kiểm tra</b> (ô xanh = đúng, ô đỏ = sai).</li>
+<li>Câu sai: đọc lại lý thuyết, sửa rồi kiểm tra lại. Bấm <b>Hiện đáp án</b> khi cần xem đáp án.</li>
+<li>Dùng <b>Bảng tổng hợp</b> ở cuối để tra nhanh khi học ngữ pháp trên lớp.</li>
+</ol>
+<div class="tip">Động từ gốc trong tài liệu được cho ở <b>thể ます</b>; mọi quy tắc chia đều xuất phát từ thể ます. “Âm trước ます” là chữ đứng ngay trước ます (書<b>き</b>ます → き).<br>
+Ký hiệu: <b>Nhóm I</b> = 五段, <b>Nhóm II</b> = 一段, <b>Nhóm III</b> = する・来る. Ô có ⚠ là lỗi hay mắc.</div>
+<p style="color:var(--muted);font-size:.9rem">Mẹo gõ: có thể gõ bằng kanji hoặc hiragana (VD: 来る hoặc くる). Bài tập I/II/III có thể gõ 1/2/3.</p>
+</div></section>
+
+<section id="s1" class="p1"><div class="hd">Phần 1. Phân nhóm động từ</div><div class="bd">
+<p>Xác định nhóm dựa vào <span class="hl">âm đứng ngay trước ます</span>. Bước này phải chính xác thì mới chia đúng mọi thể.</p>
+<div class="tw"><table><thead><tr><th>Nhóm</th><th>Cách nhận biết (từ thể ます)</th><th>Ví dụ</th></tr></thead><tbody>
+<tr><td><b>Nhóm III</b></td><td>Chỉ có します, 来ます（きます） và 「Danh từ + します」</td><td class="jp">します、来ます、勉強します、案内します</td></tr>
+<tr><td><b>Nhóm II</b></td><td>Âm trước ます thuộc <b>hàng え</b>; và một số động từ <b>hàng い</b> phải học thuộc</td><td class="jp">食べます、寝ます、教えます / 見ます、起きます、借ります</td></tr>
+<tr><td><b>Nhóm I</b></td><td>Âm trước ます thuộc <b>hàng い</b> (trừ các từ Nhóm II cần học thuộc)</td><td class="jp">書きます、飲みます、話します、待ちます、帰ります</td></tr>
+</tbody></table></div>
+<div class="tip">Các động từ <b>hàng い nhưng thuộc Nhóm II</b> hay gặp: <span class="jp">見ます、います、起きます、借ります、浴びます、できます、着ます（きます）、降ります、足ります、信じます、生きます、落ちます</span></div>
+<div class="warn">⚠ Cùng đuôi ～ります nhưng khác nhóm: 帰ります・入ります・走ります・切ります (<b>Nhóm I</b>) ↔ 借ります・降ります・足ります (<b>Nhóm II</b>).<br>⚠ 来ます (đến, Nhóm III) và 着ます (mặc, Nhóm II) đều đọc là きます — phân biệt bằng kanji.</div>
+<h3 class="ex-title">✏️ Bài tập 1. Xác định nhóm (I / II / III)</h3>
+<div class="ex" id="ex1"><table class="ext"><thead><tr><th>#</th><th>Động từ</th><th>Nhóm (I / II / III)</th></tr></thead><tbody><tr><td class="n">1</td><td class="given">話します</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">2</td><td class="given">帰ります</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">3</td><td class="given">着ます（きます）</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr><tr><td class="n">4</td><td class="given">来ます（きます）</td><td><input data-ans='[&quot;III&quot;, &quot;3&quot;, &quot;Ⅲ&quot;, &quot;iii&quot;]' autocomplete="off"><span class="key">III</span></td></tr><tr><td class="n">5</td><td class="given">遊びます</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">6</td><td class="given">教えます</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr><tr><td class="n">7</td><td class="given">走ります</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">8</td><td class="given">見ます</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr><tr><td class="n">9</td><td class="given">案内します</td><td><input data-ans='[&quot;III&quot;, &quot;3&quot;, &quot;Ⅲ&quot;, &quot;iii&quot;]' autocomplete="off"><span class="key">III</span></td></tr><tr><td class="n">10</td><td class="given">待ちます</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">11</td><td class="given">入ります</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">12</td><td class="given">借ります</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr><tr><td class="n">13</td><td class="given">死にます</td><td><input data-ans='[&quot;I&quot;, &quot;1&quot;, &quot;Ⅰ&quot;, &quot;i&quot;]' autocomplete="off"><span class="key">I</span></td></tr><tr><td class="n">14</td><td class="given">浴びます</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr><tr><td class="n">15</td><td class="given">起きます</td><td><input data-ans='[&quot;II&quot;, &quot;2&quot;, &quot;Ⅱ&quot;, &quot;ii&quot;]' autocomplete="off"><span class="key">II</span></td></tr></tbody></table><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s2" class="p2"><div class="hd">Phần 2. Thể cơ bản: 辞書・ない・て・た</div><div class="bd">
+<p>Nhóm II và III chia rất đều (bỏ ます rồi thêm đuôi); phần dễ sai nhất là <span class="hl">thể て/た của Nhóm I</span>.</p>
+<h3>2.1. Thể 辞書 (từ điển) và thể ない</h3>
+<div class="tw"><table><thead><tr><th>Nhóm</th><th>Thể 辞書</th><th>Thể ない</th></tr></thead><tbody>
+<tr><td><b>Nhóm I</b></td><td>Bỏ ます, đổi hàng い → <b>hàng う</b>: 書きます→書く</td><td>Bỏ ます, đổi hàng い → <b>hàng あ</b> + ない: 書きます→書かない</td></tr>
+<tr><td><b>Nhóm II</b></td><td>Bỏ ます + る: 食べます→食べる</td><td>Bỏ ます + ない: 食べます→食べない</td></tr>
+<tr><td><b>Nhóm III</b></td><td>します→する、来ます→来る（くる）</td><td>します→しない、来ます→来ない（こない）</td></tr>
+</tbody></table></div>
+<div class="warn">⚠ Âm い trước ます → <b>わ</b>ない (không phải あない): 買います→買わない、言います→言わない.<br>⚠ あります → <b>ない</b> (không nói あらない).<br>⚠ 来ます: thể 辞書 đọc <b>く</b>る, thể ない đọc <b>こ</b>ない.</div>
+<h3>2.2. Thể て và thể た</h3>
+<p>Thể た chia giống hệt thể て, chỉ đổi て→た, で→だ. Nhóm I chia theo âm trước ます:</p>
+<div class="tw"><table><thead><tr><th>Âm trước ます</th><th>Thể て</th><th>Thể た</th><th>Ví dụ</th></tr></thead><tbody>
+<tr><td>い・ち・り</td><td><b>って</b></td><td>った</td><td class="jp">買います→買って、待ちます→待って、帰ります→帰って</td></tr>
+<tr><td>み・び・に</td><td><b>んで</b></td><td>んだ</td><td class="jp">飲みます→飲んで、遊びます→遊んで、死にます→死んで</td></tr>
+<tr><td>き</td><td><b>いて</b></td><td>いた</td><td class="jp">書きます→書いて</td></tr>
+<tr><td>ぎ</td><td><b>いで</b></td><td>いだ</td><td class="jp">泳ぎます→泳いで</td></tr>
+<tr><td>し</td><td><b>して</b></td><td>した</td><td class="jp">話します→話して</td></tr>
+<tr><td>⚠ 行きます</td><td><b>行って</b></td><td>行った</td><td>Ngoại lệ — không nói 行いて</td></tr>
+</tbody></table></div>
+<p>Nhóm II: bỏ ます + て/た (食べて、食べた). Nhóm III: して・した、来て（きて）・来た（きた）.</p>
+<h3>2.3. Thể thông thường (普通形)</h3>
+<p>Cách nói thân mật tương ứng với 4 dạng của thể ます; dùng rất nhiều trong ngữ pháp N3 (「V普通形」) và trong ～んです ở Phần 6.</p>
+<div class="tw"><table><thead><tr><th></th><th>Khẳng định</th><th>Phủ định</th></tr></thead><tbody>
+<tr><td><b>Hiện tại</b></td><td>書きます → 書く</td><td>書きません → 書かない</td></tr>
+<tr><td><b>Quá khứ</b></td><td>書きました → 書いた</td><td>書きませんでした → 書かなかった</td></tr>
+</tbody></table></div>
+<h3 class="ex-title">✏️ Bài tập 2. Chia động từ</h3>
+<div class="ex" id="ex2"><table class="ext"><thead><tr><th>#</th><th>Động từ</th><th>Thể 辞書</th><th>Thể ない</th><th>Thể て</th><th>Thể た</th></tr></thead><tbody><tr><td class="n">1</td><td class="given">書きます</td><td><input data-ans='[&quot;書く&quot;]' autocomplete="off"><span class="key">書く</span></td><td><input data-ans='[&quot;書かない&quot;]' autocomplete="off"><span class="key">書かない</span></td><td><input data-ans='[&quot;書いて&quot;]' autocomplete="off"><span class="key">書いて</span></td><td><input data-ans='[&quot;書いた&quot;]' autocomplete="off"><span class="key">書いた</span></td></tr><tr><td class="n">2</td><td class="given">泳ぎます</td><td><input data-ans='[&quot;泳ぐ&quot;]' autocomplete="off"><span class="key">泳ぐ</span></td><td><input data-ans='[&quot;泳がない&quot;]' autocomplete="off"><span class="key">泳がない</span></td><td><input data-ans='[&quot;泳いで&quot;]' autocomplete="off"><span class="key">泳いで</span></td><td><input data-ans='[&quot;泳いだ&quot;]' autocomplete="off"><span class="key">泳いだ</span></td></tr><tr><td class="n">3</td><td class="given">飲みます</td><td><input data-ans='[&quot;飲む&quot;]' autocomplete="off"><span class="key">飲む</span></td><td><input data-ans='[&quot;飲まない&quot;]' autocomplete="off"><span class="key">飲まない</span></td><td><input data-ans='[&quot;飲んで&quot;]' autocomplete="off"><span class="key">飲んで</span></td><td><input data-ans='[&quot;飲んだ&quot;]' autocomplete="off"><span class="key">飲んだ</span></td></tr><tr><td class="n">4</td><td class="given">待ちます</td><td><input data-ans='[&quot;待つ&quot;]' autocomplete="off"><span class="key">待つ</span></td><td><input data-ans='[&quot;待たない&quot;]' autocomplete="off"><span class="key">待たない</span></td><td><input data-ans='[&quot;待って&quot;]' autocomplete="off"><span class="key">待って</span></td><td><input data-ans='[&quot;待った&quot;]' autocomplete="off"><span class="key">待った</span></td></tr><tr><td class="n">5</td><td class="given">話します</td><td><input data-ans='[&quot;話す&quot;]' autocomplete="off"><span class="key">話す</span></td><td><input data-ans='[&quot;話さない&quot;]' autocomplete="off"><span class="key">話さない</span></td><td><input data-ans='[&quot;話して&quot;]' autocomplete="off"><span class="key">話して</span></td><td><input data-ans='[&quot;話した&quot;]' autocomplete="off"><span class="key">話した</span></td></tr><tr><td class="n">6</td><td class="given">行きます</td><td><input data-ans='[&quot;行く&quot;]' autocomplete="off"><span class="key">行く</span></td><td><input data-ans='[&quot;行かない&quot;]' autocomplete="off"><span class="key">行かない</span></td><td><input data-ans='[&quot;行って&quot;]' autocomplete="off"><span class="key">行って</span></td><td><input data-ans='[&quot;行った&quot;]' autocomplete="off"><span class="key">行った</span></td></tr><tr><td class="n">7</td><td class="given">買います</td><td><input data-ans='[&quot;買う&quot;]' autocomplete="off"><span class="key">買う</span></td><td><input data-ans='[&quot;買わない&quot;]' autocomplete="off"><span class="key">買わない</span></td><td><input data-ans='[&quot;買って&quot;]' autocomplete="off"><span class="key">買って</span></td><td><input data-ans='[&quot;買った&quot;]' autocomplete="off"><span class="key">買った</span></td></tr><tr><td class="n">8</td><td class="given">呼びます</td><td><input data-ans='[&quot;呼ぶ&quot;]' autocomplete="off"><span class="key">呼ぶ</span></td><td><input data-ans='[&quot;呼ばない&quot;]' autocomplete="off"><span class="key">呼ばない</span></td><td><input data-ans='[&quot;呼んで&quot;]' autocomplete="off"><span class="key">呼んで</span></td><td><input data-ans='[&quot;呼んだ&quot;]' autocomplete="off"><span class="key">呼んだ</span></td></tr><tr><td class="n">9</td><td class="given">見ます</td><td><input data-ans='[&quot;見る&quot;]' autocomplete="off"><span class="key">見る</span></td><td><input data-ans='[&quot;見ない&quot;]' autocomplete="off"><span class="key">見ない</span></td><td><input data-ans='[&quot;見て&quot;]' autocomplete="off"><span class="key">見て</span></td><td><input data-ans='[&quot;見た&quot;]' autocomplete="off"><span class="key">見た</span></td></tr><tr><td class="n">10</td><td class="given">します</td><td><input data-ans='[&quot;する&quot;]' autocomplete="off"><span class="key">する</span></td><td><input data-ans='[&quot;しない&quot;]' autocomplete="off"><span class="key">しない</span></td><td><input data-ans='[&quot;して&quot;]' autocomplete="off"><span class="key">して</span></td><td><input data-ans='[&quot;した&quot;]' autocomplete="off"><span class="key">した</span></td></tr><tr><td class="n">11</td><td class="given">来ます</td><td><input data-ans='[&quot;くる&quot;, &quot;来る&quot;]' autocomplete="off"><span class="key">くる</span></td><td><input data-ans='[&quot;こない&quot;, &quot;来ない&quot;]' autocomplete="off"><span class="key">こない</span></td><td><input data-ans='[&quot;きて&quot;, &quot;来て&quot;]' autocomplete="off"><span class="key">きて</span></td><td><input data-ans='[&quot;きた&quot;, &quot;来た&quot;]' autocomplete="off"><span class="key">きた</span></td></tr><tr><td class="n">12</td><td class="given">あります</td><td><input data-ans='[&quot;ある&quot;]' autocomplete="off"><span class="key">ある</span></td><td><input data-ans='[&quot;ない&quot;]' autocomplete="off"><span class="key">ない</span></td><td><input data-ans='[&quot;あって&quot;]' autocomplete="off"><span class="key">あって</span></td><td><input data-ans='[&quot;あった&quot;]' autocomplete="off"><span class="key">あった</span></td></tr></tbody></table><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s3" class="p3"><div class="hd">Phần 3. Thể khả năng, ý chí, mệnh lệnh, cấm chỉ</div><div class="bd">
+<p>Quy tắc chung của Nhóm I: bỏ ます, đổi hàng い sang <span class="hl">hàng え</span> (khả năng, mệnh lệnh) hoặc <span class="hl">hàng お</span> (ý chí).</p>
+<div class="tw"><table><thead><tr><th>Thể</th><th>Nhóm I</th><th>Nhóm II</th><th>します</th><th>来ます</th></tr></thead><tbody>
+<tr><td><b>Khả năng</b><br>可能形</td><td>hàng え + る<br>書きます→書ける<br>買います→買える</td><td>bỏ ます + られる<br>食べられる</td><td>できる</td><td>来られる<br>（こられる）</td></tr>
+<tr><td><b>Ý chí</b><br>意向形</td><td>hàng お + う<br>書きます→書こう<br>行きます→行こう</td><td>bỏ ます + よう<br>食べよう</td><td>しよう</td><td>来よう<br>（こよう）</td></tr>
+<tr><td><b>Mệnh lệnh</b><br>命令形</td><td>hàng え<br>書きます→書け<br>待ちます→待て</td><td>bỏ ます + ろ<br>食べろ</td><td>しろ</td><td>来い<br>（こい）</td></tr>
+<tr><td><b>Cấm chỉ</b><br>禁止形</td><td>thể 辞書 + な<br>書きます→書く→書くな</td><td>食べるな</td><td>するな</td><td>来るな<br>（くるな）</td></tr>
+</tbody></table></div>
+<p><b>Cách dùng thường gặp ở N3:</b></p>
+<ul>
+<li>Khả năng + ようになる: <span class="jp">漢字が読めるようになりました。</span>(Đã đọc được kanji.)</li>
+<li>Ý chí + と思う / とする: <span class="jp">来年、日本へ行こうと思っています。</span>(Dự định đi Nhật.)</li>
+<li>Mệnh lệnh / cấm chỉ ở biển báo, lời trích dẫn: <span class="jp">「止まれ」「入るな」「急げと言われた」</span></li>
+</ul>
+<div class="warn">⚠ Sau khi chia, thể khả năng trở thành <b>động từ Nhóm II</b> (書ける→書けます、書けない).<br>⚠ 分かります・できます・見えます・聞こえます đã mang nghĩa khả năng, không chia thêm.<br>⚠ Thể khả năng dùng trợ từ <b>が</b> cho đối tượng: 日本語<b>が</b>話せます.</div>
+<h3 class="ex-title">✏️ Bài tập 3a. Chia động từ</h3>
+<div class="ex" id="ex3a"><table class="ext"><thead><tr><th>#</th><th>Động từ</th><th>Khả năng</th><th>Ý chí</th><th>Mệnh lệnh</th><th>Cấm chỉ</th></tr></thead><tbody><tr><td class="n">1</td><td class="given">待ちます</td><td><input data-ans='[&quot;待てる&quot;]' autocomplete="off"><span class="key">待てる</span></td><td><input data-ans='[&quot;待とう&quot;]' autocomplete="off"><span class="key">待とう</span></td><td><input data-ans='[&quot;待て&quot;]' autocomplete="off"><span class="key">待て</span></td><td><input data-ans='[&quot;待つな&quot;]' autocomplete="off"><span class="key">待つな</span></td></tr><tr><td class="n">2</td><td class="given">読みます</td><td><input data-ans='[&quot;読める&quot;]' autocomplete="off"><span class="key">読める</span></td><td><input data-ans='[&quot;読もう&quot;]' autocomplete="off"><span class="key">読もう</span></td><td><input data-ans='[&quot;読め&quot;]' autocomplete="off"><span class="key">読め</span></td><td><input data-ans='[&quot;読むな&quot;]' autocomplete="off"><span class="key">読むな</span></td></tr><tr><td class="n">3</td><td class="given">帰ります</td><td><input data-ans='[&quot;帰れる&quot;]' autocomplete="off"><span class="key">帰れる</span></td><td><input data-ans='[&quot;帰ろう&quot;]' autocomplete="off"><span class="key">帰ろう</span></td><td><input data-ans='[&quot;帰れ&quot;]' autocomplete="off"><span class="key">帰れ</span></td><td><input data-ans='[&quot;帰るな&quot;]' autocomplete="off"><span class="key">帰るな</span></td></tr><tr><td class="n">4</td><td class="given">起きます</td><td><input data-ans='[&quot;起きられる&quot;]' autocomplete="off"><span class="key">起きられる</span></td><td><input data-ans='[&quot;起きよう&quot;]' autocomplete="off"><span class="key">起きよう</span></td><td><input data-ans='[&quot;起きろ&quot;]' autocomplete="off"><span class="key">起きろ</span></td><td><input data-ans='[&quot;起きるな&quot;]' autocomplete="off"><span class="key">起きるな</span></td></tr><tr><td class="n">5</td><td class="given">します</td><td><input data-ans='[&quot;できる&quot;]' autocomplete="off"><span class="key">できる</span></td><td><input data-ans='[&quot;しよう&quot;]' autocomplete="off"><span class="key">しよう</span></td><td><input data-ans='[&quot;しろ&quot;]' autocomplete="off"><span class="key">しろ</span></td><td><input data-ans='[&quot;するな&quot;]' autocomplete="off"><span class="key">するな</span></td></tr><tr><td class="n">6</td><td class="given">来ます</td><td><input data-ans='[&quot;こられる&quot;, &quot;来られる&quot;]' autocomplete="off"><span class="key">こられる</span></td><td><input data-ans='[&quot;こよう&quot;, &quot;来よう&quot;]' autocomplete="off"><span class="key">こよう</span></td><td><input data-ans='[&quot;こい&quot;, &quot;来い&quot;]' autocomplete="off"><span class="key">こい</span></td><td><input data-ans='[&quot;くるな&quot;, &quot;来るな&quot;]' autocomplete="off"><span class="key">くるな</span></td></tr></tbody></table><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+<h3 class="ex-title">✏️ Bài tập 3b. Điền dạng đúng của động từ gợi ý</h3>
+<div class="ex" id="ex3b"><ol class="fill"><li>明日から毎朝<input class="w" data-ans='[&quot;走ろう&quot;, &quot;はしろう&quot;]' autocomplete="off" placeholder="走ります"><span class="key">走ろう</span>と思っています。</li><li>漢字が100字<input class="w" data-ans='[&quot;書ける&quot;, &quot;かける&quot;]' autocomplete="off" placeholder="書きます"><span class="key">書ける</span>ようになりました。</li><li>危ない！それに<input class="w" data-ans='[&quot;触るな&quot;, &quot;さわるな&quot;]' autocomplete="off" placeholder="触ります"><span class="key">触るな</span>！<span class="tag">cấm chỉ</span></li><li>この部屋では携帯電話が<input class="w" data-ans='[&quot;使え&quot;, &quot;つかえ&quot;]' autocomplete="off" placeholder="使います"><span class="key">使え</span>ません。<span class="tag">khả năng</span></li></ol><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s4" class="p4"><div class="hd">Phần 4. Thể điều kiện: ～ば・～たら・～と・～なら</div><div class="bd">
+<p>Cả 4 mẫu đều dịch là “nếu”, nhưng <span class="hl">cách chia và cách dùng khác nhau</span>.</p>
+<h3>4.1. Cách chia</h3>
+<div class="tw"><table><thead><tr><th>Mẫu</th><th>Nhóm I</th><th>Nhóm II</th><th>します</th><th>来ます</th></tr></thead><tbody>
+<tr><td><b>～ば</b></td><td>bỏ ます, hàng い → hàng え + ば<br>書きます→書けば<br>買います→買えば</td><td>bỏ ます + れば<br>食べれば</td><td>すれば</td><td>来れば（くれば）</td></tr>
+<tr><td><b>～たら</b></td><td>thể た + ら<br>書きます→書いたら<br>飲みます→飲んだら</td><td>食べたら</td><td>したら</td><td>来たら（きたら）</td></tr>
+<tr><td><b>～と</b></td><td>thể 辞書 + と<br>書きます→書くと</td><td>食べると</td><td>すると</td><td>来ると（くると）</td></tr>
+<tr><td><b>～なら</b></td><td>普通形 + なら<br>書きます→書くなら</td><td>食べるなら</td><td>するなら</td><td>来るなら（くるなら）</td></tr>
+</tbody></table></div>
+<div class="warn"><b>Phủ định và tính từ với ～ば (hay sai):</b><br>
+• Phủ định: 行きません → 行かない → 行か<b>なければ</b><br>
+• Tính từ い: い → <b>ければ</b>: 安い→安ければ; ⚠ いい → <b>よければ</b><br>
+• Tính từ な / Danh từ: ～なら（ば）: 静かなら、学生なら</div>
+<h3>4.2. Phân biệt cách dùng</h3>
+<div class="tw"><table><thead><tr><th>Mẫu</th><th>Dùng khi</th><th>Ví dụ</th></tr></thead><tbody>
+<tr><td><b>～と</b></td><td>Kết quả tất yếu, tự nhiên, lặp lại, chỉ đường. Vế sau <b>không</b> dùng ý chí, nhờ vả, rủ rê</td><td class="jp">春になると、桜が咲きます。</td></tr>
+<tr><td><b>～ば</b></td><td>Nhấn mạnh điều kiện cần để có kết quả. Vế trước là động từ hành động thì vế sau hạn chế ý chí/nhờ vả</td><td class="jp">練習すれば、上手になります。</td></tr>
+<tr><td><b>～たら</b></td><td>Phạm vi rộng nhất; “nếu / sau khi … thì”. Vế sau dùng được ý chí, nhờ vả, rủ rê</td><td class="jp">駅に着いたら、電話してください。</td></tr>
+<tr><td><b>～なら</b></td><td>Dựa vào thông tin/ý định của người kia để khuyên, đề xuất</td><td class="jp">北海道へ行くなら、冬がいいですよ。</td></tr>
+</tbody></table></div>
+<div class="tip">💡 Phân vân khi vế sau là nhờ vả / rủ rê / ý chí → chọn <b>～たら</b> là an toàn nhất.</div>
+<h3 class="ex-title">✏️ Bài tập 4a. Chia sang ～ば và ～たら</h3>
+<div class="ex" id="ex4a"><table class="ext"><thead><tr><th>#</th><th>Từ</th><th>～ば</th><th>～たら</th></tr></thead><tbody><tr><td class="n">1</td><td class="given">行きます</td><td><input data-ans='[&quot;行けば&quot;]' autocomplete="off"><span class="key">行けば</span></td><td><input data-ans='[&quot;行ったら&quot;]' autocomplete="off"><span class="key">行ったら</span></td></tr><tr><td class="n">2</td><td class="given">飲みます</td><td><input data-ans='[&quot;飲めば&quot;]' autocomplete="off"><span class="key">飲めば</span></td><td><input data-ans='[&quot;飲んだら&quot;]' autocomplete="off"><span class="key">飲んだら</span></td></tr><tr><td class="n">3</td><td class="given">見ます</td><td><input data-ans='[&quot;見れば&quot;]' autocomplete="off"><span class="key">見れば</span></td><td><input data-ans='[&quot;見たら&quot;]' autocomplete="off"><span class="key">見たら</span></td></tr><tr><td class="n">4</td><td class="given">します</td><td><input data-ans='[&quot;すれば&quot;]' autocomplete="off"><span class="key">すれば</span></td><td><input data-ans='[&quot;したら&quot;]' autocomplete="off"><span class="key">したら</span></td></tr><tr><td class="n">5</td><td class="given">来ます</td><td><input data-ans='[&quot;くれば&quot;, &quot;来れば&quot;]' autocomplete="off"><span class="key">くれば</span></td><td><input data-ans='[&quot;きたら&quot;, &quot;来たら&quot;]' autocomplete="off"><span class="key">きたら</span></td></tr><tr><td class="n">6</td><td class="given">行きません</td><td><input data-ans='[&quot;行かなければ&quot;]' autocomplete="off"><span class="key">行かなければ</span></td><td><input data-ans='[&quot;行かなかったら&quot;]' autocomplete="off"><span class="key">行かなかったら</span></td></tr><tr><td class="n">7</td><td class="given">安い</td><td><input data-ans='[&quot;安ければ&quot;]' autocomplete="off"><span class="key">安ければ</span></td><td><input data-ans='[&quot;安かったら&quot;]' autocomplete="off"><span class="key">安かったら</span></td></tr><tr><td class="n">8</td><td class="given">いい</td><td><input data-ans='[&quot;よければ&quot;]' autocomplete="off"><span class="key">よければ</span></td><td><input data-ans='[&quot;よかったら&quot;]' autocomplete="off"><span class="key">よかったら</span></td></tr></tbody></table><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+<h3 class="ex-title">✏️ Bài tập 4b. Bấm chọn đáp án đúng</h3>
+<div class="ex" id="ex4b"><ol class="fill"><li>右に曲がる<span class="opts"><button class="opt" data-ok="1">と</button><button class="opt" data-ok="0">なら</button></span>、駅が見えます。</li><li>日本へ行く<span class="opts"><button class="opt" data-ok="0">と</button><button class="opt" data-ok="1">なら</button></span>、京都がおすすめです。</li><li>仕事が<span class="opts"><button class="opt" data-ok="0">終わると</button><button class="opt" data-ok="1">終わったら</button></span>、飲みに行きましょう。</li><li>もっと<span class="opts"><button class="opt" data-ok="1">練習すれば</button><button class="opt" data-ok="0">練習するなら</button></span>、上手になりますよ。</li><li>雨が<span class="opts"><button class="opt" data-ok="0">降ると</button><button class="opt" data-ok="1">降ったら</button></span>、試合は中止してください。</li></ol><div class="btns"><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s5" class="p5"><div class="hd">Phần 5. Bị động, sai khiến, bị động sai khiến</div><div class="bd">
+<p>Cả 3 thể của Nhóm I đều bỏ ます và đổi hàng い sang <span class="hl">hàng あ</span> (giống thể ない); sau khi chia đều thành động từ Nhóm II.</p>
+<div class="tw"><table><thead><tr><th>Thể</th><th>Nhóm I</th><th>Nhóm II</th><th>します</th><th>来ます</th></tr></thead><tbody>
+<tr><td><b>Bị động</b><br>受身形</td><td>hàng あ + れる<br>書きます→書かれる<br>言います→言われる</td><td>bỏ ます + られる<br>食べられる</td><td>される</td><td>来られる<br>（こられる）</td></tr>
+<tr><td><b>Sai khiến</b><br>使役形</td><td>hàng あ + せる<br>書きます→書かせる<br>言います→言わせる</td><td>bỏ ます + させる<br>食べさせる</td><td>させる</td><td>来させる<br>（こさせる）</td></tr>
+<tr><td><b>Bị động sai khiến</b><br>使役受身形</td><td>hàng あ + される<br>書きます→書かされる<br>飲みます→飲まされる</td><td>bỏ ます + させられる<br>食べさせられる</td><td>させられる</td><td>来させられる<br>（こさせられる）</td></tr>
+</tbody></table></div>
+<p><b>Ý nghĩa và ví dụ:</b></p>
+<ul>
+<li><b>Bị động</b> – “bị / được”: <span class="jp">先生<b>に</b>褒められました。</span>(Được thầy khen.)</li>
+<li><b>Sai khiến</b> – “bắt / cho phép (ai) làm”: <span class="jp">母は子供<b>に</b>野菜を食べさせました。</span>(Mẹ bắt con ăn rau.)</li>
+<li><b>Bị động sai khiến</b> – “bị bắt làm (dù không muốn)”: <span class="jp">部長<b>に</b>お酒を飲まされました。</span>(Bị trưởng phòng bắt uống rượu.)</li>
+</ul>
+<div class="warn">⚠ Âm い trước ます → <b>わ</b>: 言います→言われる・言わせる・言わされる.<br>⚠ Nhóm I có âm <b>し</b> trước ます không dùng dạng rút gọn: 話します→<b>話させられる</b> (không nói 話さされる).<br>⚠ Thể bị động và thể khả năng của Nhóm II trùng nhau (食べられる) → phân biệt bằng trợ từ và ngữ cảnh.</div>
+<div class="tip">Ghi chú: Nhóm I còn có dạng đầy đủ hàng あ + せられる (書かせられる) — cũng đúng, nhưng dạng ～される phổ biến hơn trong hội thoại.</div>
+<h3 class="ex-title">✏️ Bài tập 5a. Chia động từ</h3>
+<div class="ex" id="ex5a"><table class="ext"><thead><tr><th>#</th><th>Động từ</th><th>Bị động</th><th>Sai khiến</th><th>Bị động sai khiến</th></tr></thead><tbody><tr><td class="n">1</td><td class="given">言います</td><td><input data-ans='[&quot;言われる&quot;]' autocomplete="off"><span class="key">言われる</span></td><td><input data-ans='[&quot;言わせる&quot;]' autocomplete="off"><span class="key">言わせる</span></td><td><input data-ans='[&quot;言わされる&quot;, &quot;言わせられる&quot;]' autocomplete="off"><span class="key">言わされる</span></td></tr><tr><td class="n">2</td><td class="given">待ちます</td><td><input data-ans='[&quot;待たれる&quot;]' autocomplete="off"><span class="key">待たれる</span></td><td><input data-ans='[&quot;待たせる&quot;]' autocomplete="off"><span class="key">待たせる</span></td><td><input data-ans='[&quot;待たされる&quot;, &quot;待たせられる&quot;]' autocomplete="off"><span class="key">待たされる</span></td></tr><tr><td class="n">3</td><td class="given">話します</td><td><input data-ans='[&quot;話される&quot;]' autocomplete="off"><span class="key">話される</span></td><td><input data-ans='[&quot;話させる&quot;]' autocomplete="off"><span class="key">話させる</span></td><td><input data-ans='[&quot;話させられる&quot;]' autocomplete="off"><span class="key">話させられる</span></td></tr><tr><td class="n">4</td><td class="given">食べます</td><td><input data-ans='[&quot;食べられる&quot;]' autocomplete="off"><span class="key">食べられる</span></td><td><input data-ans='[&quot;食べさせる&quot;]' autocomplete="off"><span class="key">食べさせる</span></td><td><input data-ans='[&quot;食べさせられる&quot;]' autocomplete="off"><span class="key">食べさせられる</span></td></tr><tr><td class="n">5</td><td class="given">します</td><td><input data-ans='[&quot;される&quot;]' autocomplete="off"><span class="key">される</span></td><td><input data-ans='[&quot;させる&quot;]' autocomplete="off"><span class="key">させる</span></td><td><input data-ans='[&quot;させられる&quot;]' autocomplete="off"><span class="key">させられる</span></td></tr><tr><td class="n">6</td><td class="given">来ます</td><td><input data-ans='[&quot;こられる&quot;, &quot;来られる&quot;]' autocomplete="off"><span class="key">こられる</span></td><td><input data-ans='[&quot;こさせる&quot;, &quot;来させる&quot;]' autocomplete="off"><span class="key">こさせる</span></td><td><input data-ans='[&quot;こさせられる&quot;, &quot;来させられる&quot;]' autocomplete="off"><span class="key">こさせられる</span></td></tr></tbody></table><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+<h3 class="ex-title">✏️ Bài tập 5b. Điền dạng đúng của động từ gợi ý</h3>
+<div class="ex" id="ex5b"><ol class="fill"><li>電車の中で足を<input class="w" data-ans='[&quot;踏まれ&quot;, &quot;ふまれ&quot;]' autocomplete="off" placeholder="踏みます"><span class="key">踏まれ</span>ました。<span class="tag">bị động</span></li><li>子供に部屋を<input class="w" data-ans='[&quot;掃除させ&quot;, &quot;そうじさせ&quot;]' autocomplete="off" placeholder="掃除します"><span class="key">掃除させ</span>ました。<span class="tag">sai khiến</span></li><li>子供のころ、母に毎日ピアノを<input class="w" data-ans='[&quot;練習させられ&quot;, &quot;れんしゅうさせられ&quot;]' autocomplete="off" placeholder="練習します"><span class="key">練習させられ</span>ました。<span class="tag">bị động sai khiến</span></li><li>友達を1時間も<input class="w" data-ans='[&quot;待たせ&quot;, &quot;またせ&quot;]' autocomplete="off" placeholder="待ちます"><span class="key">待たせ</span>てしまいました。<span class="tag">sai khiến</span></li></ol><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s6" class="p6"><div class="hd">Phần 6. ～んです / ～んだ và phủ định ～ん</div><div class="bd">
+<p>Hai dạng đều có chữ 「ん」 nhưng <span class="hl">hoàn toàn khác nghĩa</span>: một bên là giải thích, một bên là phủ định.</p>
+<h3>6.1. ～んです / ～んだ (giải thích, nhấn mạnh)</h3>
+<div class="tw"><table><thead><tr><th>Từ loại</th><th>Cách nối</th><th>Ví dụ</th></tr></thead><tbody>
+<tr><td>Động từ</td><td>普通形 + んです</td><td class="jp">行くんです、行かないんです、行ったんです</td></tr>
+<tr><td>Tính từ い</td><td>普通形 + んです</td><td class="jp">高いんです、高かったんです</td></tr>
+<tr><td>Tính từ な / Danh từ<br>(hiện tại khẳng định)</td><td>だ → <b>な</b> + んです</td><td class="jp">静かなんです、学生なんです</td></tr>
+</tbody></table></div>
+<div class="warn">⚠ Không nói 学生だんです — phải là 学生<b>な</b>んです.</div>
+<p><b>Các tình huống dùng:</b></p>
+<ul>
+<li>Giải thích lý do: <span class="jp">すみません、頭が痛いんです。</span></li>
+<li>Hỏi để biết lý do / xác nhận: <span class="jp">どうしたんですか。昨日、来なかったんですか。</span></li>
+<li>Mở đầu lời nhờ vả: <span class="jp">日本語でメールを書いたんですが、チェックしていただけませんか。</span></li>
+<li>Văn nói thân mật: ～んだ / ～の (<span class="jp">今日は忙しいんだ。どうしたの？</span>)</li>
+</ul>
+<h3>6.2. Phủ định ～ん (văn nói)</h3>
+<p>「～ん」 là cách nói rút gọn của 「～ない」, hay gặp trong hội thoại (người lớn tuổi, nam giới, giọng Kansai), phim, truyện. Chủ yếu cần <b>hiểu khi nghe/đọc</b>, không dùng trong văn viết trang trọng.</p>
+<div class="tw"><table><thead><tr><th>Cách chia</th><th>Ví dụ</th></tr></thead><tbody>
+<tr><td>Nhóm I, II: bỏ ない của thể ない + ん</td><td class="jp">分からない→分からん、知らない→知らん、できない→できん</td></tr>
+<tr><td>します</td><td class="jp">しない → <b>せん</b></td></tr>
+<tr><td>来ます</td><td class="jp">来ない → 来ん（こん）</td></tr>
+<tr><td>Cấu trúc có ないと / なければ</td><td class="jp">行かないといけない→行かんといかん<br>しなければならない→せんといかん</td></tr>
+</tbody></table></div>
+<div class="tip"><b>Cách phân biệt nhanh:</b><br>
+• 「ん」 đứng ngay sau <b>âm hàng あ</b> (分か<b>ら</b>ん、行<b>か</b>ん) → <span class="hl">phủ định</span><br>
+• 「ん」 đứng sau <b>普通形 đầy đủ</b>, có です / だ đi kèm (分か<b>る</b>んです、行<b>く</b>んだ) → <span class="hl">giải thích</span></div>
+<h3 class="ex-title">✏️ Bài tập 6a. Chuyển sang dạng ～んです</h3>
+<div class="ex" id="ex6a"><ol class="fill"><li>風邪をひいた → <input class="w" data-ans='[&quot;風邪をひいたんです&quot;]' autocomplete="off" placeholder="～んです"><span class="key">風邪をひいたんです</span></li><li>明日は休みだ → <input class="w" data-ans='[&quot;明日は休みなんです&quot;]' autocomplete="off" placeholder="～んです"><span class="key">明日は休みなんです</span></li><li>このかばんは高い → <input class="w" data-ans='[&quot;このかばんは高いんです&quot;]' autocomplete="off" placeholder="～んです"><span class="key">このかばんは高いんです</span></li><li>道が分からない → <input class="w" data-ans='[&quot;道が分からないんです&quot;]' autocomplete="off" placeholder="～んです"><span class="key">道が分からないんです</span></li><li>この公園は静かだ → <input class="w" data-ans='[&quot;この公園は静かなんです&quot;]' autocomplete="off" placeholder="～んです"><span class="key">この公園は静かなんです</span></li></ol><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+<h3 class="ex-title">✏️ Bài tập 6b. Chuyển dạng ～ん về dạng ～ない</h3>
+<div class="ex" id="ex6b"><ol class="fill"><li>知らん → <input class="w" data-ans='[&quot;知らない&quot;, &quot;しらない&quot;]' autocomplete="off" placeholder="～ない"><span class="key">知らない</span></li><li>行かん → <input class="w" data-ans='[&quot;行かない&quot;, &quot;いかない&quot;]' autocomplete="off" placeholder="～ない"><span class="key">行かない</span></li><li>せん → <input class="w" data-ans='[&quot;しない&quot;]' autocomplete="off" placeholder="～ない"><span class="key">しない</span></li><li>間に合わん → <input class="w" data-ans='[&quot;間に合わない&quot;, &quot;まにあわない&quot;]' autocomplete="off" placeholder="～ない"><span class="key">間に合わない</span></li><li>来ん（こん） → <input class="w" data-ans='[&quot;来ない&quot;, &quot;こない&quot;]' autocomplete="off" placeholder="～ない"><span class="key">来ない</span></li></ol><div class="btns"><button class="check">Kiểm tra</button><button class="show">Hiện đáp án</button><button class="reset">Làm lại</button></div></div>
+<h3 class="ex-title">✏️ Bài tập 6c. 「ん」 trong câu là phủ định (A) hay giải thích (B)?</h3>
+<div class="ex" id="ex6c"><ol class="fill"><li>そんなこと、知らんよ。<span class="opts"><button class="opt" data-ok="1">A. Phủ định</button><button class="opt" data-ok="0">B. Giải thích</button></span></li><li>彼も来るんだって。<span class="opts"><button class="opt" data-ok="0">A. Phủ định</button><button class="opt" data-ok="1">B. Giải thích</button></span></li><li>この問題、全然分からん。<span class="opts"><button class="opt" data-ok="1">A. Phủ định</button><button class="opt" data-ok="0">B. Giải thích</button></span></li><li>今日は早く帰るんです。<span class="opts"><button class="opt" data-ok="0">A. Phủ định</button><button class="opt" data-ok="1">B. Giải thích</button></span></li></ol><div class="btns"><button class="reset">Làm lại</button></div></div>
+</div></section>
+
+<section id="s7" class="p7"><div class="hd">Bảng tổng hợp chia thể</div><div class="bd">
+<p>Tra nhanh tất cả các thể trong tài liệu với 4 động từ mẫu.</p>
+<div class="tw"><table><thead><tr><th>Thể</th><th>Nhóm I<br>書きます</th><th>Nhóm II<br>食べます</th><th>します</th><th>来ます</th></tr></thead><tbody>
+<tr><td><b>辞書</b></td><td>書く</td><td>食べる</td><td>する</td><td>くる</td></tr>
+<tr><td><b>ない</b></td><td>書かない</td><td>食べない</td><td>しない</td><td>こない</td></tr>
+<tr><td><b>て</b></td><td>書いて</td><td>食べて</td><td>して</td><td>きて</td></tr>
+<tr><td><b>た</b></td><td>書いた</td><td>食べた</td><td>した</td><td>きた</td></tr>
+<tr><td><b>Khả năng</b></td><td>書ける</td><td>食べられる</td><td>できる</td><td>こられる</td></tr>
+<tr><td><b>Ý chí</b></td><td>書こう</td><td>食べよう</td><td>しよう</td><td>こよう</td></tr>
+<tr><td><b>Mệnh lệnh</b></td><td>書け</td><td>食べろ</td><td>しろ</td><td>こい</td></tr>
+<tr><td><b>Cấm chỉ</b></td><td>書くな</td><td>食べるな</td><td>するな</td><td>くるな</td></tr>
+<tr><td><b>～ば</b></td><td>書けば</td><td>食べれば</td><td>すれば</td><td>くれば</td></tr>
+<tr><td><b>～たら</b></td><td>書いたら</td><td>食べたら</td><td>したら</td><td>きたら</td></tr>
+<tr><td><b>Bị động</b></td><td>書かれる</td><td>食べられる</td><td>される</td><td>こられる</td></tr>
+<tr><td><b>Sai khiến</b></td><td>書かせる</td><td>食べさせる</td><td>させる</td><td>こさせる</td></tr>
+<tr><td><b>Bị động sai khiến</b></td><td>書かされる</td><td>食べさせられる</td><td>させられる</td><td>こさせられる</td></tr>
+<tr><td><b>～んです</b></td><td>書くんです</td><td>食べるんです</td><td>するんです</td><td>くるんです</td></tr>
+<tr><td><b>Phủ định ～ん</b></td><td>書かん</td><td>食べん</td><td>せん</td><td>こん</td></tr>
+</tbody></table></div>
+</div></section>
+
+</main>
+<footer>NiX Education · Tài liệu bổ trợ lớp JLPT N3 KyowaVN</footer>
+
+<script>
+function norm(s){return s.replace(/[\s　。．.、,！!]/g,'').replace(/[（(][^）)]*[）)]/g,'').trim().toLowerCase();}
+document.querySelectorAll('.ex').forEach(function(ex){
+  var inputs=ex.querySelectorAll('input[data-ans]');
+  var btns=ex.querySelector('.btns');
+  var score=document.createElement('span');score.className='score';btns.appendChild(score);
+  function check(){
+    var ok=0,total=inputs.length;
+    inputs.forEach(function(inp){
+      var alts=JSON.parse(inp.dataset.ans).map(norm);
+      var v=norm(inp.value);
+      inp.classList.remove('ok','ng');
+      if(!v){return;}
+      if(alts.indexOf(v)>=0){inp.classList.add('ok');ok++;}else{inp.classList.add('ng');}
+    });
+    score.textContent='Đúng '+ok+'/'+total;
+  }
+  var c=ex.querySelector('.check'); if(c) c.onclick=check;
+  var s=ex.querySelector('.show'); if(s) s.onclick=function(){ex.classList.toggle('showkey');s.textContent=ex.classList.contains('showkey')?'Ẩn đáp án':'Hiện đáp án';};
+  ex.querySelector('.reset').onclick=function(){
+    inputs.forEach(function(i){i.value='';i.classList.remove('ok','ng');});
+    ex.querySelectorAll('.opt').forEach(function(o){o.classList.remove('ok','ng');o.disabled=false;});
+    ex.classList.remove('showkey'); if(s) s.textContent='Hiện đáp án'; score.textContent='';
+  };
+  inputs.forEach(function(inp){inp.addEventListener('keydown',function(e){if(e.key==='Enter'){check();}});});
+  ex.querySelectorAll('li').forEach(function(li){
+    var opts=li.querySelectorAll('.opt');
+    opts.forEach(function(o){o.onclick=function(){
+      if(o.dataset.ok==='1'){o.classList.add('ok');opts.forEach(function(x){x.disabled=true;});}
+      else{o.classList.add('ng');}
+      var all=ex.querySelectorAll('li'),done=0;
+      all.forEach(function(l){if(l.querySelector('.opt.ok'))done++;});
+      score.textContent='Đã đúng '+done+'/'+all.length;
+    };});
+  });
+});
+</script>
+</body>
+</html>
